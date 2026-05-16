@@ -1,46 +1,32 @@
-# Ilon o'yini — Android APK uchun Buildozer sozlamalari
-# Qurish (Linux / WSL2): buildozer android debug
-
 [app]
 
+# O'yin nomi va sozlamalari
 title = Ilon O'yini
 package.name = snakegame
 package.domain = uz.ilon
 
+# Kodlar joylashgan manzil
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json
 
+# Versiya
 version = 1.0.0
 
-# Faqat Kivy — internet ruxsati shart emas
-requirements = python3,kivy
+# Kerakli kutubxonalar (Barqaror versiyalar majburlab qo'yildi)
+requirements = python3,kivy==2.3.0,pillow
 
-# Ikonka qo'shsangiz, quyidagi qatorlarni oching:
-# icon.filename = %(source.dir)s/assets/icon.png
-# presplash.filename = %(source.dir)s/assets/presplash.png
-
+# Ekran sozlamalari
 orientation = portrait
 fullscreen = 0
 
-# O'yin foniga mos (main.py dagi to'q fon)
-android.presplash_color = #121724
-
-#
-# Android
-#
-
-# Qo'shimcha ruxsatlar kerak emas (offline o'yin)
-# android.permissions =
-
+# Android tizim sozlamalari (Litsenziya va barqaror NDK versiyalari)
 android.api = 34
 android.minapi = 24
+android.ndk = 25b
+android.ndk_api = 21
 android.accept_sdk_license = True
 android.archs = arm64-v8a, armeabi-v7a
 
-# Play Store uchun keyin: buildozer android release
-# android.release_artifact = aab
-
 [buildozer]
-
 log_level = 2
 warn_on_root = 1
