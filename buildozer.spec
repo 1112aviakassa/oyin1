@@ -16,8 +16,9 @@ version = 1.0.0
 requirements = python3,kivy==2.3.0,pillow
 
 # Ekran sozlamalari
-orientation = portrait
-fullscreen = 0
+# icon.filename = %(source.dir)s/assets/icon.png
+# presplash.filename = %(source.dir)s/assets/presplash.png
+
 
 # Android tizim sozlamalari (Litsenziya va barqaror NDK versiyalari)
 android.api = 34
