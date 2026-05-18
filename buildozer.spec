@@ -1,32 +1,19 @@
 [app]
-
-# O'yin nomi va sozlamalari
-title = Ilon O'yini
+title = Ilon Oyini
 package.name = snakegame
-package.domain = uz.ilon
-
-# Kodlar joylashgan manzil
+package.domain = org.test
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas,json
-
-# Versiya
+source.include_exts = py,png,jpg,kv,atlas
 version = 1.0.0
+requirements = python3,kivy,pillow
 
-# Kerakli kutubxonalar (Barqaror versiyalar majburlab qo'yildi)
-requirements = python3,kivy==2.3.0,pillow
-
-# Ekran sozlamalari
+# Grafika va ikonka sozlamalari
 icon.filename = %(source.dir)s/icon.png
-# presplash.filename = %(source.dir)s/assets/presplash.png
 
-
-# Android tizim sozlamalari (Litsenziya va barqaror NDK versiyalari)
-android.api = 34
-android.minapi = 24
-android.ndk = 25b
-android.ndk_api = 21
-android.accept_sdk_license = True
+orientation = portrait
+fullscreen = 1
 android.archs = arm64-v8a, armeabi-v7a
+android.allow_backup = True
 
 [buildozer]
 log_level = 2
