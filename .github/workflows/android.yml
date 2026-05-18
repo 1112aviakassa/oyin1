@@ -23,4 +23,6 @@ jobs:
     - name: Build with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        buildozer android debug
+        # Google litsenziyalarini avtomat qabul qilish buyrug'i:
+        mkdir -p ~/.android && touch ~/.android/repositories.cfg
+        yes | buildozer android debug
